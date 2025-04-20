@@ -3,128 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jax Bot Privacy Policy & Terms of Use</title>
+  <title>Jax Bot Privacy Policy</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      line-height: 1.6;
-      padding: 0 1rem;
-      color: #333;
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #005f99;
+      --text-color: #333;
+      --bg-color: #f9f9f9;
+      --max-width: 800px;
+      --padding: 1.5rem;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    h1, h2 {
-      color: #005f99;
-      margin-top: 2rem;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: var(--padding);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
     h1 {
+      margin-top: 0;
       font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    p, li {
-      margin-bottom: 0.75rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-      margin-bottom: 1rem;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 2rem 0;
+      color: var(--primary-color);
     }
     .updated {
       font-size: 0.9rem;
       color: #666;
       margin-bottom: 1.5rem;
     }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.3rem;
+    }
+    p, li {
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+    }
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background-color: #eef;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Jax Bot Privacy Policy</h1>
+    <p class="updated">Last updated: April 20, 2025</p>
 
-  <h1>Jax Bot Privacy Policy & Terms of Use</h1>
-  <p class="updated">Last updated: April 20, 2025</p>
-  <hr>
+    <h2>1. Introduction</h2>
+    <p>
+      Jax (“we,” “us,” or “our”) is an independent, fan‑made Discord bot for the mobile game <strong>mo.co</strong> by Supercell. This bot is <strong>not</strong> affiliated with, endorsed by, sponsored by, or approved by Supercell; it is distributed under Supercell’s Fan Content Policy. Your privacy matters to us. This document explains what data we collect, why we collect it, how we use it, and how you can manage or delete your information.
+    </p>
 
-  <h2>1. Introduction</h2>
-  <p>
-    Jax (“we,” “us,” or “our”) is an independent, fan‑made Discord bot for the mobile game mo.co by Supercell. This bot is <strong>not</strong> affiliated with, endorsed by, sponsored by, or approved by Supercell; it is distributed under Supercell’s Fan Content Policy. Your privacy is important to us. This Privacy Policy explains what data we collect, why we collect it, how we use it, with whom we share it, and how you can control or delete it.
-  </p>
+    <h2>2. Data We Collect</h2>
+    <ul>
+      <li>
+        <strong>Discord Identifiers</strong>
+        <ul>
+          <li><strong>User ID &amp; Username:</strong> Collected when you interact with the bot to verify permissions and personalize responses.</li>
+          <li><strong>Guild/Channel/Role IDs:</strong> Stored to configure announcement channels, log channels, and role pings.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Command Content</strong><br>
+        Any message you send beginning with our prefix <code>$</code> is processed in real time. These messages are <strong>not</strong> persisted in our database; they may be forwarded to your server’s log channel if audit logging is enabled.
+      </li>
+      <li>
+        <strong>Configuration Settings</strong><br>
+        Stored securely in our private SQLite database:
+        <ul>
+          <li>Announcement channel settings</li>
+          <li>Log channel settings</li>
+          <li>Role assignments for events</li>
+        </ul>
+        No other personal data, attachments, or message histories are stored.
+      </li>
+    </ul>
 
-  <h2>2. Data We Collect</h2>
-  <ul>
-    <li><strong>Discord Identifiers</strong>
-      <ul>
-        <li><strong>User ID &amp; Username:</strong> Collected when you interact with the bot to verify permissions and personalize responses.</li>
-        <li><strong>Guild (Server) ID, Channel ID &amp; Role ID:</strong> Stored to configure where announcements go, where logs are sent, and which roles to ping.</li>
-      </ul>
-    </li>
-    <li><strong>Command Content</strong>
-      <p>Any message you send that begins with our command prefix ($) is read by the bot. These messages are <strong>not</strong> stored in our database; they are logged in a designated Discord channel if you enable logging.</p>
-    </li>
-    <li><strong>Configuration Settings</strong>
-      <ul>
-        <li>Announcement channel settings</li>
-        <li>Log channel settings</li>
-        <li>Role assignments for events</li>
-      </ul>
-      <p>No other personal data, attachments, or message histories are stored.</p>
-    </li>
-  </ul>
+    <h2>3. Why We Need Your Data</h2>
+    <ul>
+      <li><strong>Functionality:</strong> To announce in‑game events accurately and on schedule.</li>
+      <li><strong>Permissions:</strong> To verify who may use administrative commands (e.g. <code>$start</code>, <code>$stop</code>, <code>$set-role</code>).</li>
+      <li><strong>Audit Logging:</strong> To provide an optional command history for server administrators.</li>
+      <li><strong>Persistence:</strong> To remember your settings across bot restarts.</li>
+    </ul>
 
-  <h2>3. Why We Need Your Data</h2>
-  <ul>
-    <li><strong>Operation &amp; Functionality:</strong> To announce in‑game events accurately in your chosen channels and with the right role mentions.</li>
-    <li><strong>Permissions Management:</strong> To verify who may use administrative commands (e.g. $start, $stop, $set-role).</li>
-    <li><strong>Audit Logging:</strong> If you enable it, to provide an audit trail of commands for server administrators.</li>
-    <li><strong>Service Configuration:</strong> To remember your settings between bot restarts.</li>
-  </ul>
+    <h2>4. How We Use Your Data</h2>
+    <ul>
+      <li><strong>Event Announcements:</strong> Reading your settings to post alerts in the correct channel.</li>
+      <li><strong>Command Processing:</strong> Executing your requested actions in real time.</li>
+      <li><strong>Logging:</strong> Forwarding commands to a designated log channel (if enabled) for transparency.</li>
+    </ul>
 
-  <h2>4. How We Use Your Data</h2>
-  <ul>
-    <li><strong>Event Announcements:</strong> Reading your configuration to post alerts in the correct channel at the right time.</li>
-    <li><strong>Command Handling:</strong> Processing your commands in real‑time to perform the requested actions.</li>
-    <li><strong>Logging:</strong> Forwarding your commands to a designated log channel for transparency and troubleshooting (only if enabled).</li>
-  </ul>
+    <h2>5. Data Sharing</h2>
+    <ul>
+      <li><strong>Discord, Inc.:</strong> Via the Discord API for normal bot operations.</li>
+      <li><strong>Server Log Channel:</strong> If audit logging is enabled, your commands (author, user ID, timestamp, content) are sent there.</li>
+      <li><strong>No Third‑Party Sharing:</strong> We do <strong>not</strong> sell, rent, or share your data with advertisers, analytics providers, or other external parties, except as required by law.</li>
+    </ul>
 
-  <h2>5. Data Sharing</h2>
-  <ul>
-    <li><strong>Discord, Inc.:</strong> Via the Discord API for normal bot operations.</li>
-    <li><strong>Your Server’s Log Channel:</strong> If audit logging is enabled, your commands are shared to the configured channel.</li>
-    <li><strong>No Third‑Party Sharing:</strong> We do not sell, rent, or share your data with external parties, except as required by law.</li>
-  </ul>
+    <h2>6. Data Retention &amp; Removal</h2>
+    <ul>
+      <li>
+        <strong>Configuration Data:</strong> Retained until you remove it via bot commands:
+        <ul>
+          <li><code>$channel-delete</code></li>
+          <li><code>$delete-log</code></li>
+          <li><code>$delete-role</code></li>
+        </ul>
+      </li>
+      <li>
+        <strong>Logs in Discord:</strong> Remain in your server’s log channel until manually purged.
+      </li>
+      <li>
+        <strong>Deletion Requests:</strong> To delete all stored data, contact us (see Section 7). Requests will be processed within 30 days.
+      </li>
+    </ul>
 
-  <h2>6. Data Retention &amp; Removal</h2>
-  <ul>
-    <li><strong>Configuration Data:</strong> Retained until you remove it via bot commands ($channel-delete, $delete-log, $delete-role) or request deletion.</li>
-    <li><strong>Logs in Discord:</strong> Remain in your server’s log channel until manually purged.</li>
-    <li><strong>Deletion Requests:</strong> To delete all data, contact us (see Section 7); we will process requests within 30 days.</li>
-  </ul>
-
-  <h2>7. Contact Us</h2>
-  <p>
-    If you have any questions, concerns, or requests regarding your data, please contact:<br>
-    <strong>Discord:</strong> DM <code>@sirziggi</code><br>
-    <strong>Response Time:</strong> We aim to reply within 72 hours.
-  </p>
-
-  <h2>8. Terms of Use</h2>
-  <ul>
-    <li>Respect Discord’s Terms of Service and all relevant community guidelines.</li>
-    <li>Do not spam commands, abuse rate limits, or attempt to overwhelm the bot.</li>
-    <li>Do not reverse‑engineer, decompile, or tamper with the bot’s code.</li>
-    <li>Do not use the bot for illegal, defamatory, harassing, or malicious activities.</li>
-    <li>No impersonation: Do not claim that this bot is an official Supercell product.</li>
-    <li><strong>Liability Disclaimer:</strong> Jax is provided “as‑is,” without warranties of any kind. We are not responsible for any loss, damage, or downtime resulting from the bot’s operation or misuse.</li>
-  </ul>
-
-  <p>
-    Failure to comply may result in removal of access to the bot’s services. We reserve the right to update this policy and terms at any time; users will be notified of material changes via the bot or in this document.
-  </p>
-
+    <h2>7. Contact Us</h2>
+    <p>
+      For questions, concerns, or data requests, please contact:<br>
+      <strong>Discord:</strong> DM <code>@sirziggi</code><br>
+      <strong>Response Time:</strong> Within 72 hours.
+    </p>
+  </div>
 </body>
 </html>
