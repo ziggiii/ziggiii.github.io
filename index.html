@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jax Bot Privacy Policy</title>
+  <title>Jax Bot Privacy Policy</title>
   <style>
     :root {
       --primary-color: #2c3e50;
@@ -27,7 +27,7 @@
       margin: 2rem auto;
       background-color: #fff;
       padding: var(--padding);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
     h1 {
@@ -71,12 +71,12 @@
 </head>
 <body>
   <div class="container">
-    <h1>Jax Bot Privacy Policy</h1>
-    <p class="updated">Last updated: April 20, 2025</p>
+    <h1>Jax Bot Privacy Policy</h1>
+    <p class="updated">Last updated: April 20, 2025</p>
 
     <h2>1. Introduction</h2>
     <p>
-      Jax (“we,” “us,” or “our”) is an independent, fan‑made Discord bot for the mobile game <strong>mo.co</strong> by Supercell. This bot is <strong>not</strong> affiliated with, endorsed by, sponsored by, or approved by Supercell; it is distributed under Supercell’s Fan Content Policy. Your privacy matters to us. This document explains what data we collect, why we collect it, how we use it, and how you can manage or delete your information.
+      Jax (“we,” “us,” or “our”) is an independent, fan-made Discord bot for the mobile game <strong>mo.co</strong> by Supercell. This bot is <strong>not</strong> affiliated with, endorsed by, sponsored by, or approved by Supercell; it is operated under Supercell’s Fan Content Policy. Our services are hosted on <a href="https://bot-hosting.net" target="_blank">bot-hosting.net</a>. Your privacy is our priority. This policy explains what data we collect, why we collect it, how we use it, and how you can manage or delete your information.
     </p>
 
     <h2>2. Data We Collect</h2>
@@ -84,20 +84,20 @@
       <li>
         <strong>Discord Identifiers</strong>
         <ul>
-          <li><strong>User ID &amp; Username:</strong> Collected when you interact with the bot to verify permissions and personalize responses.</li>
-          <li><strong>Guild/Channel/Role IDs:</strong> Stored to configure announcement channels, log channels, and role pings.</li>
+          <li><strong>User ID &amp; Username:</strong> Collected when you interact with the bot to verify permissions and personalize responses.</li>
+          <li><strong>Guild/Channel/Role IDs:</strong> Stored to configure announcement channels and role pings.</li>
         </ul>
       </li>
       <li>
-        <strong>Command Content</strong><br>
-        Any message you send beginning with our prefix <code>$</code> is processed in real time. These messages are <strong>not</strong> persisted in our database; they may be forwarded to your server’s log channel if audit logging is enabled.
+        <strong>Interaction Data</strong><br>
+        We process slash commands (e.g. <code>/events</code>, <code>/next</code>) in real time. These interactions are <strong>not</strong> stored in our database, aside from optional forwarding to a designated audit-log channel.
       </li>
       <li>
         <strong>Configuration Settings</strong><br>
         Stored securely in our private SQLite database:
         <ul>
           <li>Announcement channel settings</li>
-          <li>Log channel settings</li>
+          <li>Audit-log channel settings</li>
           <li>Role assignments for events</li>
         </ul>
         No other personal data, attachments, or message histories are stored.
@@ -106,8 +106,8 @@
 
     <h2>3. Why We Need Your Data</h2>
     <ul>
-      <li><strong>Functionality:</strong> To announce in‑game events accurately and on schedule.</li>
-      <li><strong>Permissions:</strong> To verify who may use administrative commands (e.g. <code>$start</code>, <code>$stop</code>, <code>$set-role</code>).</li>
+      <li><strong>Functionality:</strong> To announce in-game events accurately via slash commands.</li>
+      <li><strong>Permissions:</strong> To verify who may use administrative commands.</li>
       <li><strong>Audit Logging:</strong> To provide an optional command history for server administrators.</li>
       <li><strong>Persistence:</strong> To remember your settings across bot restarts.</li>
     </ul>
@@ -115,47 +115,44 @@
     <h2>4. How We Use Your Data</h2>
     <ul>
       <li><strong>Event Announcements:</strong> Reading your settings to post alerts in the correct channel.</li>
-      <li><strong>Command Processing:</strong> Executing your requested actions in real time.</li>
-      <li><strong>Logging:</strong> Forwarding commands to a designated log channel (if enabled) for transparency.</li>
+      <li><strong>Command Processing:</strong> Executing slash commands in real time.</li>
+      <li><strong>Logging:</strong> Forwarding interactions to an audit-log channel if enabled.</li>
     </ul>
 
     <h2>5. Data Sharing</h2>
     <ul>
       <li><strong>Discord, Inc.:</strong> Via the Discord API for normal bot operations.</li>
-      <li><strong>Server Log Channel:</strong> If audit logging is enabled, your commands (author, user ID, timestamp, content) are sent there.</li>
-      <li><strong>No Third‑Party Sharing:</strong> We do <strong>not</strong> sell, rent, or share your data with advertisers, analytics providers, or other external parties, except as required by law.</li>
+      <li><strong>Audit-Log Channel:</strong> If enabled, your interactions (user ID, timestamp, command) are sent there.</li>
+      <li><strong>No Third-Party Sharing:</strong> We do <strong>not</strong> sell, rent, or share your data with external parties, except as required by law.</li>
     </ul>
 
     <h2>6. Data Retention &amp; Removal</h2>
     <ul>
       <li>
-        <strong>Configuration Data:</strong> Retained until you remove it via bot commands:
+        <strong>Configuration Data:</strong> Retained until you remove it via slash commands:
         <ul>
-          <li><code>$channel-delete</code></li>
-          <li><code>$delete-log</code></li>
-          <li><code>$delete-role</code></li>
+          <li><code>/channel-delete</code></li>
+          <li><code>/delete-log</code></li>
+          <li><code>/delete-role by-id</code> or <code>/delete-role by-role</code></li>
         </ul>
       </li>
+      <li><strong>Audit Logs:</strong> Remain in your server’s channel until manually purged.</li>
       <li>
-        <strong>Logs in Discord:</strong> Remain in your server’s log channel until manually purged.
-      </li>
-      <li>
-        <strong>Deletion Requests:</strong> To delete all stored data, contact us (see Section 7). Requests will be processed within 30 days.
+        <strong>Deletion Requests:</strong> To delete all stored data, contact us (see Section 7). Requests will be fulfilled within 30 days.
       </li>
     </ul>
 
     <h2>7. Contact Us</h2>
     <p>
-      For questions, concerns, or data requests, please contact:<br>
-      <strong>Discord:</strong> DM <code>@sirziggi</code><br>
-      <strong>Response Time:</strong> Within 72 hours.
+      For privacy inquiries, please join our support server:<br>
+      <a href="https://discord.gg/ycR7nQgEY3" target="_blank">https://discord.gg/ycR7nQgEY3</a><br>
+      We aim to respond within 72 hours.
     </p>
 
     <h2>8. Changes to this Privacy Policy</h2>
     <p>
-      We reserve the right to update or modify this Privacy Policy at any time. If we make material changes, we will update the “Last updated” date at the top and may provide a notification via Discord. You are responsible for reviewing this page periodically to stay informed of any updates.
+      We reserve the right to update this Privacy Policy at any time. Material changes will be reflected in the “Last updated” date, and may be announced via our support server. Please review this page periodically.
     </p>
-
   </div>
 </body>
 </html>
