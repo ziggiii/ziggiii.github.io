@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jax Bot Privacy Policy</title>
   <style>
@@ -72,11 +70,11 @@
 <body>
   <div class="container">
     <h1>Jax Bot Privacy Policy</h1>
-    <p class="updated">Last updated: April 21, 2025</p>
+    <p class="updated">Last updated: April 27, 2025</p>
 
     <h2>1. Introduction</h2>
     <p>
-      Jax (“we,” “us,” or “our”) is an independent, fan-made Discord bot for the mobile game <strong>mo.co</strong> by Supercell. This bot is <strong>not</strong> affiliated with, endorsed by, sponsored by, or approved by Supercell; it is operated under Supercell’s Fan Content Policy. Our services are hosted on <a href="https://bot-hosting.net" target="_blank">bot-hosting.net</a>. Your privacy is our priority. This policy explains what data we collect, why we collect it, how we use it, and how you can manage or delete your information.
+      Jax (“we,” “us,” or “our”) is an independent, fan-made Discord bot for the mobile game <strong>mo.co</strong> by Supercell. This bot is <strong>not</strong> affiliated with, endorsed by, sponsored by, or approved by Supercell. Our services are hosted on <a href="https://bot-hosting.net/" target="_blank">bot-hosting.net</a>. Your privacy is our priority. This policy explains what data we collect, why we collect it, how we use it, and how you can manage or delete your information.
     </p>
 
     <h2>2. Data We Collect</h2>
@@ -84,44 +82,79 @@
       <li>
         <strong>Discord Identifiers</strong>
         <ul>
-          <li><strong>User ID &amp; Username:</strong> Collected when you interact with the bot to verify permissions and personalize responses.</li>
-          <li><strong>Guild/Channel/Role IDs:</strong> Stored to configure announcement channels and role pings.</li>
+          <li><strong>User ID &amp; Username:</strong> Collected on interaction to verify permissions and personalize responses.</li>
+          <li><strong>Guild/Channel/Role IDs:</strong> Stored to configure announcement channels, log channels, and role pings.</li>
         </ul>
       </li>
       <li>
         <strong>Interaction Data</strong><br>
-        We process slash commands (e.g. <code>/events</code>, <code>/next</code>) in real time. These interactions are <strong>not</strong> stored in our database, aside from optional forwarding to a designated audit-log channel.
+        We process slash commands (e.g. <code>/next</code>, <code>/loadout</code>) in real time. We do <strong>not</strong> store the content of those commands outside of optional audit-logging.
       </li>
       <li>
         <strong>Configuration Settings</strong><br>
-        Stored securely in our private SQLite database:
+        Stored securely in our private SQLite databases:
         <ul>
           <li>Announcement channel settings</li>
           <li>Audit-log channel settings</li>
           <li>Role assignments for events</li>
+          <li>News channel settings</li>
         </ul>
-        No other personal data, attachments, or message histories are stored.
+      </li>
+      <li>
+        <strong>Custom Loadouts</strong><br>
+        When you create a loadout via <code>/create-loadout</code>, we store:
+        <ul>
+          <li>Category (Dojo/Rift/World)</li>
+          <li>Name of your loadout</li>
+          <li>Weapon, gadgets, passives, rings</li>
+          <li>Optional comment</li>
+          <li>Timestamp and your user ID</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Like/Dislike Votes</strong><br>
+        When you vote on community loadouts, we store:
+        <ul>
+          <li>Loadout ID</li>
+          <li>Your user ID</li>
+          <li>Your vote (+1, –1)</li>
+          <li>Timestamp</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Telemetry &amp; Analytics</strong><br>
+        We optionally track command usage for statistics:
+        <ul>
+          <li>Command name</li>
+          <li>Guild ID, User ID</li>
+          <li>Timestamp</li>
+        </ul>
+        This data is stored in a separate telemetry database and used only for aggregate usage metrics (unique users, server count, command counts).
       </li>
     </ul>
 
     <h2>3. Why We Need Your Data</h2>
     <ul>
-      <li><strong>Functionality:</strong> To announce in-game events accurately via slash commands.</li>
-      <li><strong>Permissions:</strong> To verify who may use administrative commands.</li>
-      <li><strong>Audit Logging:</strong> To provide an optional command history for server administrators.</li>
-      <li><strong>Persistence:</strong> To remember your settings across bot restarts.</li>
+      <li><strong>Functionality:</strong> To deliver event announcements, loadout management, and news features correctly.</li>
+      <li><strong>Permissions:</strong> To verify administrative access for certain commands.</li>
+      <li><strong>Persistence:</strong> To remember your settings and loadouts across restarts.</li>
+      <li><strong>Community Voting:</strong> To prevent multiple votes and generate leaderboards.</li>
+      <li><strong>Analytics:</strong> To improve bot reliability and feature usage insights.</li>
     </ul>
 
     <h2>4. How We Use Your Data</h2>
     <ul>
-      <li><strong>Event Announcements:</strong> Reading your settings to post alerts in the correct channel.</li>
+      <li><strong>Event &amp; News Announcements:</strong> Posting alerts in the correct channels.</li>
       <li><strong>Command Processing:</strong> Executing slash commands in real time.</li>
-      <li><strong>Logging:</strong> Forwarding interactions to an audit-log channel if enabled.</li>
+      <li><strong>Audit Logging:</strong> Forwarding to designated log channels if enabled.</li>
+      <li><strong>Loadout Management:</strong> Saving, displaying, and deleting your custom loadouts.</li>
+      <li><strong>Voting System:</strong> Recording your votes and updating like/dislike counts.</li>
+      <li><strong>Telemetry:</strong> Aggregating command usage for dashboards and bot health monitoring.</li>
     </ul>
 
     <h2>5. Data Sharing</h2>
     <ul>
-      <li><strong>Discord, Inc.:</strong> Via the Discord API for normal bot operations.</li>
+      <li><strong>Discord, Inc.:</strong> Via the Discord API for bot operations.</li>
       <li><strong>Audit-Log Channel:</strong> If enabled, your interactions (user ID, timestamp, command) are sent there.</li>
       <li><strong>No Third-Party Sharing:</strong> We do <strong>not</strong> sell, rent, or share your data with external parties, except as required by law.</li>
     </ul>
@@ -129,14 +162,18 @@
     <h2>6. Data Retention &amp; Removal</h2>
     <ul>
       <li>
-        <strong>Configuration Data:</strong> Retained until you remove it via slash commands:
+        <strong>Configuration &amp; Loadout Data:</strong> Retained until you remove it via slash commands:
         <ul>
-          <li><code>/channel-delete</code></li>
-          <li><code>/delete-log</code></li>
-          <li><code>/delete-role by-id</code> or <code>/delete-role by-role</code></li>
+          <li><code>/channel-delete</code>, <code>/delete-log</code>, <code>/delete-role</code></li>
+          <li><code>/delete-loadout</code> or the delete button under <code>/show-loadout</code></li>
         </ul>
       </li>
-      <li><strong>Audit Logs:</strong> Remain in your server’s channel until manually purged.</li>
+      <li>
+        <strong>Voting Records:</strong> Retained until you delete your loadout (votes cascade) or on request.
+      </li>
+      <li>
+        <strong>Telemetry Data:</strong> Aggregated summary data retained indefinitely; raw logs purged after 90 days.
+      </li>
       <li>
         <strong>Deletion Requests:</strong> To delete all stored data, contact us (see Section 7). Requests will be fulfilled within 30 days.
       </li>
